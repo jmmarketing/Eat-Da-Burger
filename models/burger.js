@@ -5,7 +5,7 @@ var burger = {
     all: function(cb) {
         orm.selectAll("burgers", function(res){
             cb(res); 
-            console.log(res);
+            //console.log(res);
         }); 
     },
 
