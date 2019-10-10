@@ -1,4 +1,4 @@
-var connection = require ("./connection.js");
+var connection = require ("../config/connection.js");
 
 
 var orm = {
@@ -13,9 +13,9 @@ var orm = {
         })
     },
 
-    insertOne: function(tableInput, col1, col2, val1, val2, callback){
-        var queryString = "INSERT INTO ?? (??, ??) VALUES (?, ?)";
-        connection.query(queryString, [tableInput, col1, col2, val1, val2], function (err, result){
+    insertOne: function(tableInput, col1, val1, callback){
+        var queryString = "INSERT INTO ?? (??) VALUES (?)";
+        connection.query(queryString, [tableInput, col1, val1], function (err, result){
             if(err){
                 throw err;
             }
