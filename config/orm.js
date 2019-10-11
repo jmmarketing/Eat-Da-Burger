@@ -1,6 +1,7 @@
+// ##################### REQUIRED FILES TO CONNECT TO DATABASE ###################
 var connection = require ("../config/connection.js");
 
-
+// ################ Functions to make changes in Database Part 1 ################
 var orm = {
 
     selectAll: function(tableInput, callback) {

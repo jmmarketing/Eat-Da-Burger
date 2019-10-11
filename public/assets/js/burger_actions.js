@@ -1,5 +1,8 @@
 console.log("Connected to JS File"); 
 
+
+// ################ JAVASCRIPT ON CLICK FUNCTIONS ################
+
 $(function () {
 
     $("#order-burger").on("click", function (event) {

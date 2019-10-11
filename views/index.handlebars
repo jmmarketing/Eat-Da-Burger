@@ -27,7 +27,7 @@
                 <h2>Burgers I Have Ordered</h2>
                 <hr>
 
-
+                <!-- Calls Burgers from Data Base with Devoured=false-->
                 {{#each burgers}}
                 {{#unless devoured}}
                 <div class="card mb-3" data-devour="false" style="max-width: 540px;">
@@ -62,6 +62,7 @@
 
                 <h2>Devoured Burgers</h2>
                 <hr>
+                <!-- Calls Burgers from Data Base with Devoured=True-->
 
                 {{#each burgers}}
                 {{#if devoured}}

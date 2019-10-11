@@ -1,4 +1,7 @@
+// ##################### REQUIRED FILES TO USE ORM.JS ###################
 var orm = require("../config/orm.js"); 
+
+// ################ Functions to make changes in Database Part 2 ################
 
 var burger = {
 
