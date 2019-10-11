@@ -1,3 +1,5 @@
+console.log("Connected to JS File"); 
+
 $(function () {
 
     $("#order-burger").on("click", function (event) {
@@ -22,7 +24,7 @@ $(function () {
     $(document).on("click", "#eat-burger", function(event){
         var id = $(this).data("id"); 
         var newDevour = {
-            devour: true
+            devoured: true
         };
 
         $.ajax("/api/burgers/" +id, {

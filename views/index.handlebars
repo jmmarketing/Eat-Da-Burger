@@ -15,7 +15,7 @@
                         <h3>Order A Delicious Good Burger</h3>
                         <input type="text" class="form-control" id="new-burger" placeholder="Enter Your Burger">
 
-                        <button type="submit" id="order-buger" class="btn btn-primary btn-block">Order Burger</button>
+                        <button type="submit" id="order-burger" class="btn btn-primary btn-block">Order Burger</button>
                     </form>
                 </div>
             </div>
@@ -26,6 +26,10 @@
             <div class="col-6 ">
                 <h2>Burgers I Have Ordered</h2>
                 <hr>
+
+
+                {{#each burgers}}
+                {{#unless devoured}}
                 <div class="card mb-3" data-devour="false" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -34,14 +38,20 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h4 class="card-title">Delicious Double Double Burger</h4>
-                                <button type="submit" id="eat-buger" data-id="1" class="btn btn-danger btn-block">Eat This
+                                <h4 class="card-title">{{this.burger_name}}</h4>
+                                <button type="submit" id="eat-burger" data-id="{{this.id}}" class="btn btn-danger btn-block">Eat This
                                     Burger</button>
 
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                {{/unless}}
+                {{/each}}
+
+                
 
 
             </div>
@@ -52,6 +62,9 @@
 
                 <h2>Devoured Burgers</h2>
                 <hr>
+
+                {{#each burgers}}
+                {{#if devoured}}
                 <div class="card mb-3" data-devour="true" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -60,13 +73,16 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h4 class="card-title">Flying Dutchman Burger</h4>
+                                <h4 class="card-title">{{this.burger_name}}</h4>
 
 
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                {{/if}}
+                {{/each}}
 
             </div>
         </div>

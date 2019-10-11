@@ -14,7 +14,7 @@ var orm = {
     },
 
     insertOne: function(tableInput, col1, val1, callback){
-        var queryString = "INSERT INTO ?? (??) VALUES (?)";
+        var queryString = "INSERT INTO ?? (??) VALUE (?)";
         connection.query(queryString, [tableInput, col1, val1], function (err, result){
             if(err){
                 throw err;
@@ -23,9 +23,9 @@ var orm = {
         })
     },
 
-    updateOne: function (tableInput, col1, val1, id, callback){
-        var queryString= "UPDATE ?? SET ?? = ? WHERE id=?";
-        connection.query(queryString, [tableInput, col1, val1, id], function(err, result){
+    updateOne: function (tableInput, val1, id, callback){
+        var queryString= "UPDATE ?? SET devoured = ? WHERE id=?";
+        connection.query(queryString, [tableInput, val1, id], function(err, result){
             if (err){
                 throw err;
             }
